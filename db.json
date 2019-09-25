@@ -29,18 +29,11 @@
       "date": "2019-05-31T19:57:35.544Z"
     },
     {
-      "message": "Change network card on server 008",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2019-09-24T06:47:53.143Z",
-      "id": 5
-    },
-    {
-      "message": "dsadsa",
-      "attention": false,
-      "tech": "Sara Wilson",
-      "date": "2019-09-24T06:50:19.291Z",
-      "id": 7
+      "id": 5,
+      "message": "test",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2019-09-25T06:36:51.871Z"
     }
   ],
   "techs": [
