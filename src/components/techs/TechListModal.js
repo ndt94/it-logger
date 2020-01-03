@@ -3,16 +3,19 @@ import { connect, useSelector, useDispatch } from 'react-redux';
 import TechItem from './TechItem';
 import PropTypes from 'prop-types';
 import { getTechs } from '../../actions/techAction';
+import GetTech from '../shared/hooks/getTech';
 
 const TechListModal = () => {
-  const tech = useSelector(state => state.tech);
+  //   const tech = useSelector(state => state.tech);
+  //   const { techs, loading } = tech;
+  //   const dispatch = useDispatch();
+  //   useEffect(() => {
+  //     dispatch(getTechs());
+  //     // es-lint-disable-next-line
+  //     // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   }, [getTechs]);
+  const tech = GetTech();
   const { techs, loading } = tech;
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getTechs());
-    // es-lint-disable-next-line
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [getTechs]);
 
   return (
     <div id="tech-list-modal" className="modal">

@@ -1,11 +1,11 @@
 {
   "logs": [
     {
+      "id": 1,
       "message": "Changed network card in server 007",
       "attention": false,
-      "tech": "Sam Smith",
-      "date": "2019-05-31T15:46:10.179Z",
-      "id": 1
+      "tech": "Jesse Nguyen",
+      "date": "2020-01-03T07:30:54.157Z"
     },
     {
       "id": 2,
@@ -15,11 +15,11 @@
       "date": "2019-05-31T16:18:04.245Z"
     },
     {
+      "id": 3,
       "message": "1122 wireless down",
       "attention": true,
-      "tech": "Sara Wilson",
-      "date": "2019-05-31T15:46:48.690Z",
-      "id": 3
+      "tech": "Sam Smith",
+      "date": "2020-01-03T05:42:11.982Z"
     },
     {
       "id": 4,
@@ -30,24 +30,17 @@
     },
     {
       "id": 5,
-      "message": "test again123",
+      "message": "test again1234",
       "attention": true,
-      "tech": "Duc Trung Nguyen",
-      "date": "2020-01-03T04:01:25.646Z"
-    },
-    {
-      "message": "test again",
-      "attention": true,
-      "tech": "Jesse Nguyen",
-      "date": "2020-01-03T04:17:10.879Z",
-      "id": 6
+      "tech": "J The Man",
+      "date": "2020-01-03T05:42:37.485Z"
     },
     {
       "id": 7,
       "message": "Fix bug insurance ops",
       "attention": false,
-      "tech": "Duc Trung Nguyen",
-      "date": "2020-01-03T05:15:09.717Z"
+      "tech": "John Doe",
+      "date": "2020-01-03T08:23:38.541Z"
     }
   ],
   "techs": [

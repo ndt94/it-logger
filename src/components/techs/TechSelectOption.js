@@ -2,16 +2,20 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect, useSelector, useDispatch } from 'react-redux';
 import { getTechs } from '../../actions/techAction';
+import GetTech from '../shared/hooks/getTech';
 
 const TechSelectOption = () => {
-  const tech = useSelector(state => state.tech);
+  //   const tech = useSelector(state => state.tech);
+  //   const { techs, loading } = tech;
+  //   const dispatch = useDispatch();
+  //   useEffect(() => {
+  //     dispatch(getTechs());
+  //     // es-lint-disable-next-line
+  //     // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   }, [getTechs]);
+
+  const tech = GetTech();
   const { techs, loading } = tech;
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getTechs());
-    // es-lint-disable-next-line
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [getTechs]);
 
   return (
     !loading &&
