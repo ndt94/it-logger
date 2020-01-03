@@ -3,7 +3,7 @@ import { connect, useSelector, useDispatch } from 'react-redux';
 import TechItem from './TechItem';
 import PropTypes from 'prop-types';
 import { getTechs } from '../../actions/techAction';
-import GetTech from '../shared/hooks/getTech';
+import useGetTech from '../shared/hooks/getTech';
 
 const TechListModal = () => {
   //   const tech = useSelector(state => state.tech);
@@ -14,7 +14,7 @@ const TechListModal = () => {
   //     // es-lint-disable-next-line
   //     // eslint-disable-next-line react-hooks/exhaustive-deps
   //   }, [getTechs]);
-  const tech = GetTech();
+  const tech = useGetTech();
   const { techs, loading } = tech;
 
   return (

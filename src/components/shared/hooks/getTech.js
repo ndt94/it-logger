@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getTechs } from '../../../actions/techAction';
-const GetTech = () => {
+const useGetTech = () => {
   const tech = useSelector(state => state.tech);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -13,4 +13,4 @@ const GetTech = () => {
   return tech;
 };
 
-export default GetTech;
+export default useGetTech;
