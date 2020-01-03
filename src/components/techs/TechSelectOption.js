@@ -1,35 +1,59 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { getTechs } from "../../actions/techAction";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect, useSelector, useDispatch } from 'react-redux';
+import { getTechs } from '../../actions/techAction';
 
-const TechSelectOption = ({ getTechs, tech: { techs, loading } }) => {
-    useEffect(() => {
-        getTechs();
-        // es-lint-disable-next-line
-    }, [getTechs]);
+const TechSelectOption = () => {
+  const tech = useSelector(state => state.tech);
+  const { techs, loading } = tech;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getTechs());
+    // es-lint-disable-next-line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [getTechs]);
 
-    return (
-        !loading &&
-        techs !== null &&
-        techs.map(t => (
-            <option key={t.id} value={`${t.firstName} ${t.lastName}`}>
-                {t.firstName} {t.lastName}
-            </option>
-        ))
-    );
+  return (
+    !loading &&
+    techs !== null &&
+    techs.map(t => (
+      <option key={t.id} value={`${t.firstName} ${t.lastName}`}>
+        {t.firstName} {t.lastName}
+      </option>
+    ))
+  );
 };
 
-TechSelectOption.propTypes = {
-    tech: PropTypes.object.isRequired,
-    getTechs: PropTypes.func.isRequired
-};
+export default TechSelectOption;
 
-const mapStateToProps = state => ({
-    tech: state.tech
-});
+// OLD WAYS WITH CONNECT
+// const TechSelectOption = ({ getTechs, tech: { techs, loading } }) => {
+//     useEffect(() => {
+//         getTechs();
+//         // es-lint-disable-next-line
+//     }, [getTechs]);
 
-export default connect(
-    mapStateToProps,
-    { getTechs }
-)(TechSelectOption);
+//     return (
+//         !loading &&
+//         techs !== null &&
+//         techs.map(t => (
+//             <option key={t.id} value={`${t.firstName} ${t.lastName}`}>
+//                 {t.firstName} {t.lastName}
+//             </option>
+//         ))
+//     );
+// };
+
+// TechSelectOption.propTypes = {
+//     tech: PropTypes.object.isRequired,
+//     getTechs: PropTypes.func.isRequired
+// };
+
+// const mapStateToProps = state => ({
+//     tech: state.tech
+// });
+
+// export default connect(
+//     mapStateToProps,
+//     { getTechs }
+// )(TechSelectOption);
